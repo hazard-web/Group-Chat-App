@@ -22,6 +22,7 @@ const userRouter = require("./router/userRouter");
 
 
 app.use("/", userRouter);
+app.use("/user", userRouter);
 
 sequelize
   .sync()
