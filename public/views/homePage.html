@@ -61,7 +61,7 @@
                 <li class="active">
                   <div class="d-flex bd-highlight">
                     <div class="user_info">
-                      <span>Ishaan</span>
+                      <span>Ishaan Agrawal</span>
                       <p>Ishaan is online</p>
                     </div>
                   </div>
@@ -69,32 +69,32 @@
                 <li>
                   <div class="d-flex bd-highlight">
                     <div class="user_info">
-                      <span>Taherah Big</span>
-                      <p>Taherah left 7 mins ago</p>
+                      <span>Shreya Garg</span>
+                      <p>Shreya left 7 mins ago</p>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div class="d-flex bd-highlight">
                     <div class="user_info">
-                      <span>Sami Rafi</span>
-                      <p>Sami is online</p>
+                      <span>Sarthak Sharma</span>
+                      <p>Sarthak is online</p>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div class="d-flex bd-highlight">
                     <div class="user_info">
-                      <span>Nargis Hawa</span>
-                      <p>Nargis left 30 mins ago</p>
+                      <span>Divya Sharma</span>
+                      <p>Divya left 30 mins ago</p>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div class="d-flex bd-highlight">
                     <div class="user_info">
-                      <span>Rashid Samim</span>
-                      <p>Rashid left 50 mins ago</p>
+                      <span>Vedant Garg</span>
+                      <p>Vedant left 50 mins ago</p>
                     </div>
                   </div>
                 </li>
@@ -104,12 +104,12 @@
           </div>
         </div>
         <div class="col-md-8 col-xl-8 chat">
-          <div class="card" id="chatBox">
+          <div class="card">
             <div class="card-header msg_head">
               <div class="d-flex bd-highlight">
                 <div class="user_info">
-                  <span>Chat with Khalid</span>
-                  <p>1767 Messages</p>
+                  <span>Chat with Ishaan</span>
+                  <p>56 Messages</p>
                 </div>
                 <div class="video_cam">
                   <span><i class="fas fa-video"></i></span>
@@ -131,7 +131,7 @@
             <div class="card-body msg_card_body" id="chatBoxBody">
               <!-- <span
                 class="d-flex justify-content-start px-3 mb-1 text-uppercase small"
-                >Nidhi Jagga
+                >Shivam Bhardwaj
               </span>
               <div class="d-flex justify-content-start mb-4">
                 <div class="msg_cotainer">
@@ -152,3 +152,34 @@
             </div>
             <div class="card-footer">
               <div class="input-group">
+                <div class="input-group-append">
+                  <span class="input-group-text attach_btn"
+                    ><i class="fas fa-paperclip"></i
+                  ></span>
+                </div>
+                <textarea
+                  id="messageTextArea"
+                  class="form-control type_msg"
+                  placeholder="Type your message..."
+                ></textarea>
+                <div class="input-group-append" id="messageSendBtn">
+                  <span class="input-group-text send_btn"
+                    ><i class="fas fa-location-arrow"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#action_menu_btn").click(function () {
+        $(".action_menu").toggle();
+      });
+    });
+  </script>
+  <script src="/js/chat.js"></script>
+</html>

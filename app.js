@@ -26,11 +26,11 @@ const userRouter = require("./router/userRouter");
 const homePageRouter = require("./router/homePageRouter");
 const chatRouter = require("./router/chatRouter");
 
-//Models
+
 const User = require("./models/userModel");
 const Chat = require("./models/chatModel");
 
-//Relationships between Tables
+
 User.hasMany(Chat, { onDelete: "CASCADE", hooks: true });
 Chat.belongsTo(User);
 
