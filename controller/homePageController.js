@@ -13,6 +13,6 @@ exports.getHomePage = async (req, res, next) => {
 };
 
 
-module.exports = {
-    getHomePage,
-}
+// module.exports = {
+//     getHomePage,
+// }
