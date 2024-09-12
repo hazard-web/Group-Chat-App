@@ -57,47 +57,15 @@
               </div>
             </div>
             <div class="card-body contacts_body">
-              <ui class="contacts">
-                <li class="active">
+              <ui class="contacts" id="groups">
+                <!-- <li class="active">
                   <div class="d-flex bd-highlight">
                     <div class="user_info">
-                      <span>Ishaan Agrawal</span>
-                      <p>Ishaan is online</p>
+                      <span>Khalid</span>
+                      <p>Kalid is online</p>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <div class="d-flex bd-highlight">
-                    <div class="user_info">
-                      <span>Shreya Garg</span>
-                      <p>Shreya left 7 mins ago</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="d-flex bd-highlight">
-                    <div class="user_info">
-                      <span>Sarthak Sharma</span>
-                      <p>Sarthak is online</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="d-flex bd-highlight">
-                    <div class="user_info">
-                      <span>Divya Sharma</span>
-                      <p>Divya left 30 mins ago</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="d-flex bd-highlight">
-                    <div class="user_info">
-                      <span>Vedant Garg</span>
-                      <p>Vedant left 50 mins ago</p>
-                    </div>
-                  </div>
-                </li>
+                </li> -->
               </ui>
             </div>
             <div class="card-footer"></div>
@@ -107,14 +75,14 @@
           <div class="card">
             <div class="card-header msg_head">
               <div class="d-flex bd-highlight">
-                <div class="user_info">
-                  <span>Chat with Ishaan</span>
-                  <p>56 Messages</p>
+                <div class="user_info" id="groupNameHeading">
+                  <!-- <span>Chat with Khalid</span>
+                  <p>1767 Messages</p> -->
                 </div>
-                <div class="video_cam">
+                <!-- <div class="video_cam">
                   <span><i class="fas fa-video"></i></span>
                   <span><i class="fas fa-phone"></i></span>
-                </div>
+                </div> -->
               </div>
               <span id="action_menu_btn"
                 ><i class="fas fa-ellipsis-v"></i
@@ -122,8 +90,12 @@
               <div class="action_menu">
                 <ul>
                   <li><i class="fas fa-user-circle"></i> View profile</li>
-                  <li><i class="fas fa-users"></i> Add to close friends</li>
-                  <li><i class="fas fa-plus"></i> Add to group</li>
+                  <li id="createGroup">
+                    <i class="fas fa-users"></i> Create Group
+                  </li>
+                  <li id="addToGroup">
+                    <i class="fas fa-plus"></i> Add to group
+                  </li>
                   <li><i class="fas fa-ban"></i> Block</li>
                 </ul>
               </div>
@@ -131,7 +103,7 @@
             <div class="card-body msg_card_body" id="chatBoxBody">
               <!-- <span
                 class="d-flex justify-content-start px-3 mb-1 text-uppercase small"
-                >Shivam Bhardwaj
+                >Nidhi Jagga
               </span>
               <div class="d-flex justify-content-start mb-4">
                 <div class="msg_cotainer">
@@ -182,6 +154,6 @@
     });
   </script>
   <!-- <script src="http://localhost:5000/socket.io/socket.io.js"></script> -->
-   
+  <script src="/js/group.js"></script>
   <script src="/js/chat.js"></script>
 </html>

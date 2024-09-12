@@ -1,22 +1,20 @@
-const sequelize = require("../util/database");
 const Sequelize = require("sequelize");
+const sequelize = require("../util/database");
 
-const Chat = sequelize.define("chats", {
+const UserGroup = sequelize.define("UserGroup", {
   id: {
     type: Sequelize.INTEGER,
-    allowNull: false,
     autoIncrement: true,
+    allowNull: false,
     primaryKey: true,
   },
-  name: {
-    type: Sequelize.STRING,
-  },
-  message: {
-    type: Sequelize.STRING,
+  isadmin: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false,
   },
   userId: {
     type: Sequelize.INTEGER,
-    allowNull: false, 
+    allowNull: false,
   },
   groupId: {
     type: Sequelize.INTEGER,
@@ -24,4 +22,4 @@ const Chat = sequelize.define("chats", {
   },
 });
 
-module.exports = Chat;
+module.exports = UserGroup;
