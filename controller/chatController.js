@@ -63,7 +63,7 @@ exports.sendMessage = async (req, res, next) => {
 exports.getMessages = async (req, res, next) => {
   try {
     const param = req.query.param;
-    console.log(req.query.groupName);
+    
     const group = await Group.findOne({
       where: { name: req.query.groupName }
     });
