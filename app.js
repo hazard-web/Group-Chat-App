@@ -4,6 +4,11 @@ const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
 const fs = require("fs");
+const dotenv = require("dotenv");
+dotenv.config();
+
+const morgan = require('morgan');
+const compression = require('compression');
 
 const cors = require("cors");
 app.use(
@@ -11,9 +16,16 @@ app.use(
     origin: "*",
   })
 );
+app.use(express.json());
 
-const dotenv = require("dotenv");
-dotenv.config();
+app.use(compression());
+
+const accessLogsStream = fs.createWriteStream(
+  path.join(__dirname, 'access.log'),
+  { flags: 'a' }
+);
+
+app.use(morgan('combined', { stream: accessLogsStream}));
 
 const sequelize = require("./util/database");
 
