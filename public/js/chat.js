@@ -43,7 +43,7 @@ async function messageSend() {
       return alert("Select group to send the message");
     }
     const res = await axios.post(
-      `http://localhost:3000/chat/sendMessage/`,
+      `http://15.207.111.237:3000/chat/sendMessage/`,
       {
         message: message,
         groupName: groupName,
@@ -102,7 +102,7 @@ async function getMessages() {
       param = 0;
     }
     const res = await axios.get(
-      `http://localhost:3000/chat/getMessages?param=${param}&groupName=${groupName}`
+      `http://15.207.111.237:3000/chat/getMessages?param=${param}&groupName=${groupName}`
     );
     const token = localStorage.getItem("token");
     const decodedToken = decodeToken(token);
