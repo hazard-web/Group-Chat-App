@@ -10,12 +10,12 @@ dotenv.config();
 const morgan = require('morgan');
 const compression = require('compression');
 
-const cors = require("cors");
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+// const cors = require("cors");
+// app.use(
+//   cors({
+//     origin: "*",
+//   })
+// );
 app.use(express.json());
 
 app.use(compression());
