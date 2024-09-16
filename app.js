@@ -63,8 +63,11 @@ app.use("/homePage", homePageRouter);
 app.use("/chat", chatRouter);
 app.use("/group", groupRouter);
 
+const job = require("./jobs/cron");
+job.start();
+
 sequelize
-  .sync({alter: true})
+  .sync({ force: true})
   .then((result) => {
     console.log('Model synced successfully');
     app.listen(process.env.PORT || 3000);
